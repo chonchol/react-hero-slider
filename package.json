@@ -1,8 +1,12 @@
 {
   "name": "react-hero-image-slider",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple React hero image slider component",
   "main": "src/index.js",
+  "scripts": {
+    "prepublishOnly": "echo 'Ready to publish!'",
+    "test": "echo 'No tests specified' && exit 0"
+  },
   "dependencies": {
     "react": "^18.2.0"
   },

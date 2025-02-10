@@ -1,0 +1,156 @@
+.slider-area {
+  position: relative;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.slider-item .item {
+  box-shadow: inset 0 0 0 2000px rgb(38 38 38 / 35%);
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: #FFFFFF;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.slider-content {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translate(-20%, -20%);
+  color: white;
+  padding-left: 100px;
+  padding-right: 450px;
+  padding-top: 6%;
+}
+
+.slider-content h2 {
+  font-size: 80px;
+  line-height: 80px;
+  margin: 0;
+  margin-bottom: 40px;
+  letter-spacing: 5px;
+}
+
+.slider-content h4 {
+  font-size: 28px;
+  line-height: 30px;
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.slider-control-btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.slider-control-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.slider-btn-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.slider-item {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease-in-out forwards;
+}
+
+.fade-up.delay {
+  animation-delay: 0.3s;
+}
+
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomIn 0.6s ease-in-out forwards 0.6s;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .slider-content {
+    text-align: center;
+    top: 10%;
+    left: 0%;
+    padding-left: 0;
+    padding-right: 0;
+    transform: translate(0%, 0%);
+  }
+
+}
